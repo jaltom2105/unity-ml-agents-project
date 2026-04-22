@@ -1,8 +1,5 @@
 # Phase 2 — Running Example Agents
 
-**Date Completed:** April 21, 2026
-**Status:** ✅ Complete
-
 ## What Was Done
 - Installed Unity Hub and Unity 6.4 (6000.4.3f1)
 - Opened ML-Agents example project in Unity 6.4
