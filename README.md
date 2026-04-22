@@ -22,9 +22,9 @@
 | Phase | Description | Status |
 |-------|-------------|--------|
 | Phase 0 | Project infrastructure & GitHub setup | ✅ Complete |
-| Phase 1 | Environment installation & configuration | 🔄 In Progress |
-| Phase 2 | Running & understanding example agents | ⏳ Pending |
-| Phase 3 | Deep dive into PPO, rewards, and configs | ⏳ Pending |
+| Phase 1 | Environment installation & configuration | ✅ Complete |
+| Phase 2 | Running & understanding example agents | ✅ Complete |
+| Phase 3 | Deep dive into PPO, rewards, and configs | 🔄 In Progress |
 | Phase 4 | Custom agent design and training | ⏳ Pending |
 | Phase 5 | Polish, writeup, and presentation | ⏳ Pending |
 
