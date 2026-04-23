@@ -5,10 +5,10 @@
 > I discovered that unity has its own machine learning agents toolkit, so I decided to tackle this project with that, allowing me to first learn from their examples and later progress to making my own.
 
 ## Project Goals
-- Understand how reinforcement learning (PPO) works in practice
-- Get Unity ML-Agents examples running with GPU-accelerated training
+- Understand how reinforcement learning works in practice
+- Get Unity ML-Agents examples running with GPU-accelerated training (previously struggled with this step)
 - Design and train a custom agent from scratch
-- Document every step for reproducibility
+- Document the process to be able to replicate it in the future
 
 ## Tech Stack
 - **Unity** 2022.3 LTS — simulation environment
@@ -19,17 +19,14 @@
 - **Hardware** — NVIDIA RTX 5070 (GPU-accelerated training)
 
 ## Progress Log
-| Phase | Description | Status |
+| Phase | What's going on | Status of the phase |
 |-------|-------------|--------|
-| Phase 0 | Project infrastructure & GitHub setup | ✅ Complete |
-| Phase 1 | Environment installation & configuration | ✅ Complete |
-| Phase 2 | Running & understanding example agents | ✅ Complete |
-| Phase 3 | Deep dive into PPO, rewards, and configs | 🔄 In Progress |
-| Phase 4 | Custom agent design and training | ⏳ Pending |
-| Phase 5 | Polish, writeup, and presentation | ⏳ Pending |
+| Phase 0 | Project infrastructure & GitHub setup | Complete |
+| Phase 1 | Environment installation & configuration | Complete |
+| Phase 2 | Running & understanding example agents | Complete |
+| Phase 3 | Deep dive into PPO, rewards, and configs | In Progress |
+| Phase 4 | Custom agent design and training | ----- |
+| Phase 5 | Polish, writeup, and presentation | ----- |
 
 ## Devlog
-Detailed notes for each phase are in the [`devlog/`](./devlog) folder.
-
-## Results
-*(Training graphs, videos, and findings will be added here as the project progresses)*
+My notes for each phase are in the [`devlog/`](./devlog) folder.
