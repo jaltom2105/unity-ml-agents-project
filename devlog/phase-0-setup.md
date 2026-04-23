@@ -14,7 +14,6 @@
   - Markdown All in One (Yu Zhang)
 - Cloned repository locally to `C:\Projects\unity-ml-agents-project`
 - Verified VS Code opens correctly from terminal with `code .`
-- Downloaded Unity onto desktop
 
 ## Key Notes
 - Project lives at `C:\Projects\unity-ml-agents-project` on desktop
