@@ -3,15 +3,14 @@
 ## Overview
 Rather than just continuing to run the examples, I wanted Phase 3 to focus on getting a understanding the mechanics behind reinforcement learning. This meant I was reading actual agent code line by line, learning the reward design philosophy, and running controlled experiments to verify my understanding through real results. In this phase I read the two complete agent scripts for Ball3DAgent.cs and CrawlerAgent.cs. I broke down every parameter in the config YAML file, and ran some controlled experiments that produced real measurable findings.
 
-## 3.1 — How PPO Works
+## 3.1 — Understanding PPO
 
-PPO (Proximal Policy Optimization) is the algorithm that powered every training run in this project. Understanding it deeply is essential before building a custom agent.
+PPO stands for Proximal Policy Optimization, and it is the algorithm that powered every training run in this project. Before building my own agent, I wanted to get a better understanding of what ppo is.
 
-### The Problem PPO Solves
-Before PPO, earlier RL algorithms had a critical flaw — if you updated the policy too aggressively based on new experiences, you could accidentally make it much worse and never recover. PPO solves this with one elegant idea: don't change the policy too much in any single update. The "Proximal" in PPO literally means "nearby" — keep the new policy close to the old one by clipping updates so they can never be too large in a single step.
+### Why use PPO?
+Before PPO, earlier RL algorithms had a critical flaw, where if you updated the policy too aggressively based on new experiences, you could accidentally make it much worse and never recover. PPO solves this in a really smart way: don't change the policy too much in any single update. The "Proximal" in PPO literally means "nearby", where keeping the new policy close to the old one by clipping updates means there can never be too large of a jump in behaviour in a single step.
 
-### What is a Policy?
-The agent's strategy is called a policy. It is literally a neural network that takes in observations and outputs actions:
+The agent's strategy is called a policy. It's literally a neural network that takes in observations and outputs actions:
 
 ```
 Observations (what the agent sees)
@@ -21,11 +20,11 @@ Observations (what the agent sees)
 Actions (what the agent does)
 ```
 
-For 3DBall specifically:
+From the 3DBall example specifically:
 - Observations in: ball position (x,y,z), ball velocity (x,y,z), platform rotation (x,z) = 8 numbers total
 - Actions out: how much to tilt left/right, how much to tilt forward/back = 2 numbers total
 
-### The Training Loop — Step by Step
+### The Training Loop
 This exact loop ran thousands of times during every training session:
 
 ```
@@ -52,7 +51,7 @@ The 3DBall example went from completely random behavior to perfect balance in ab
 
 ## 3.2 — Config File Deep Dive
 
-The 3DBall.yaml config file was opened and every single parameter was analyzed in depth. This file controlled every aspect of the training run that produced the learning curve visible in the TensorBoard screenshots.
+The 3DBall.yaml config file was opened and every single parameter was looked at. This file controlled every aspect of the training run that produced the learning curve visible in the TensorBoard screenshots.
 
 ```yaml
 behaviors:
@@ -82,7 +81,7 @@ behaviors:
     summary_freq: 12000
 ```
 
-### Parameter Breakdown
+### Breakdown of the parameters:
 
 **behaviors: 3DBall**
 This key maps directly to the Behavior Name set in Unity's Inspector on the agent's Behavior Parameters component. This is how Python knows which config applies to which agent in the scene.
@@ -259,7 +258,7 @@ Allows manual keyboard control of the agent using arrow keys instead of the neur
 
 ---
 
-## 3.4 — Reading Agent Code: CrawlerAgent.cs
+## 3.4 — Reading the next agent code: CrawlerAgent.cs
 
 The complete CrawlerAgent.cs was read and compared against Ball3DAgent.cs to understand how the same four methods scale to a dramatically more complex problem. Crawler uses 20 continuous actions compared to 3DBall's 2, and introduces several advanced techniques not present in 3DBall.
 
