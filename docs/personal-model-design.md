@@ -70,6 +70,7 @@ The golf club is attached rigidly onto both hands with a standard right-handed g
 | Torso position relative to ball | 3 | Is agent standing over the ball |
 | Hip rotation | 2 | Lower body position |
 | Right shoulder rotation | 2 | Primary swing arm |
+| Right shoulder position | 3 | To calculate swing plane |
 | Right elbow rotation | 1 | Club extension |
 | Left shoulder rotation | 2 | Lead arm |
 | Left elbow rotation | 1 | Lead arm extension |
